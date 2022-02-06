@@ -14,6 +14,7 @@ namespace IQueryable
     {
         static void Main(string[] args)
         {
+            ExpressionTrees.Test();
         }
     }
 }
