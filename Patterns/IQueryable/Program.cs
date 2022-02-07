@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,7 +15,26 @@ namespace IQueryable
     {
         static void Main(string[] args)
         {
-            ExpressionTrees.Test();
+            var a = ThreeFourths(4);
         }
+
+        public static decimal ThreeFourths(int x) => (decimal)3 * x / 4;
+    }
+
+
+    public class Command
+    {
+        private int Execute() => 42;
+    }
+
+    public static class ReflectionDelegate
+    {
+        private static MethodInfo ExecuteMethod { get; } = typeof(Command)
+            .GetMethod("Execute", BindingFlags.NonPublic | BindingFlags.Instance);
+
+        private static Func<Command, int> Impl { get; } =
+            (Func<Command, int>) Delegate.CreateDelegate(typeof(Func<Command, int>), ExecuteMethod);
+
+        public static int CallExecute(Command command) => Impl(command);
     }
 }
