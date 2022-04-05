@@ -32,3 +32,9 @@ CREATE UNIQUE INDEX AK_UnitMeasure_Name
 CREATE NONCLUSTERED INDEX FIBillOfMaterialsWithEndDate  
     ON Production.BillOfMaterials (ComponentID, StartDate)  
     WHERE EndDate IS NOT NULL ;  
+
+--index with nonkey columns
+CREATE NONCLUSTERED INDEX IX_Address_PostalCode  
+ON Person.Address (PostalCode)  
+INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);  
+GO  

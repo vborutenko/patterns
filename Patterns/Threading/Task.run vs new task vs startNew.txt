@@ -1,0 +1,16 @@
+﻿Task.Run is a shorthand for Task.Factory.StartNew with specific safe arguments:
+
+Task.Factory.StartNew(
+    action, 
+    CancellationToken.None, 
+    TaskCreationOptions.DenyChildAttach, 
+    TaskScheduler.Default);
+It was added in .Net 4.5 to help with the increasingly frequent usage of async and offloading work to the ThreadPool.
+
+Task.Factory.StartNew (added with TPL in .Net 4.0) is much more robust. 
+You should only use it if Task.Run isn't enough, for example when you want 
+to use TaskCreationOptions.LongRunning (though it's unnecessary when the delegate is async. More on that on my blog: LongRunning Is Useless For Task.Run With async-await). More on Task.Factory.StartNew in Task.Run vs Task.Factory.StartNew
+
+Don't ever create a Task and call Start() unless you find an extremely good reason to do so. It should only be used if you have some part that needs to create tasks but not schedule them and another part that schedules without creating. That's almost never an appropriate solution and could be dangerous. More in "Task.Factory.StartNew" vs "new Task(...).Start"
+
+In conclusion, mostly use Task.Run, use Task.Factory.StartNew if you must and never use Start.

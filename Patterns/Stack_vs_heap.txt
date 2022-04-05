@@ -1,0 +1,14 @@
+In stack data can be added to and deleted only from the top of it.
+In heap data can be stored and removed in any order.
+
+
+The stack is always reserved in a LIFO (last in first out) order
+
+
+In a multi-threaded application, each thread will have its own stack. But, all the different threads will share the heap
+
+The stack is much faster than the heap. This is because of the way that memory is allocated on the stack. 
+Allocating memory on the stack is as simple as moving the stack pointer up.
+
+
+Data on the stack is automatically deallocated when variables go out of scope

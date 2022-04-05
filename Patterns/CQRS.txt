@@ -1,0 +1,7 @@
+CQRS stands for Command and Query Responsibility Segregation, a pattern that separates read and update operations for a data store
+
+
+The idea behind the CQRS pattern is very simple. 
+Instead of having one unified model, you need to introduce two: one for reads and the other one for writes, and that’s it.
+
+There are disproportionately more reads than writes in a typical system, and so it’s important to be able to scale them independently from each other.

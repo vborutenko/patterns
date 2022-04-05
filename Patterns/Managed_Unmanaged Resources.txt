@@ -1,0 +1,9 @@
+Managed resources basically means "managed memory" that is managed by the garbage collector. 
+When you no longer have any references to a managed object (which uses managed memory), the garbage collector will (eventually) release that memory for you.
+
+Unmanaged resources are then everything that the garbage collector does not know about. For example:
+
+-Open files
+-Open network connections
+-Unmanaged memory
+-In XNA: vertex buffers, index buffers, textures, etc.

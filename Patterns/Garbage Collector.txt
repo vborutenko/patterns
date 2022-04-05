@@ -1,0 +1,52 @@
+-- Generations
+
+Generation 0
+This generation has temporary objects; it contains short-lived objects. 
+Most of the objects from generation 0 do not survive until the next generation because they are reclaimed. It is the youngest generation.
+
+Generation 1
+This generation is a buffer between short-lived objects and long-lived objects. It also contains short-lived objects.
+
+Generation 2
+This generation contains long-lived objects and a reclaim hardly occurs in this generation. The example for such objects is static objects in server applications. 
+
+
+-- GC roots
+
+GC roots are not objects in themselves but are instead references to objects. 
+Any object referenced by a GC root will automatically survive the next garbage collection
+
+1. A local variable in a method that is currently running is considered to be a GC root.
+2. Static variables
+3.Handles: typically, these are references used for communication between managed and unmanaged code. 
+Such roots must live at least until the unmanaged code needs "managed" objects.
+4.Finalizer references: references to objects waiting to be finalized. These roots live until the finalizer is run.
+
+-- GC phases
+
+-Marking phase
+that finds and creates a list of all live objects.
+
+-Relocate phase
+updates the references to the objects that will be compacted.
+
+-Compact phase
+The space is reclaimed from dead objects. The live objects in heap and free memory are compacted in memory to ensure the allocation of new objects in small time. The compaction of large objects is not done because it can create a bad impact on performance.
+
+
+
+
+--F-reachable queue / Finalization queue
+
+
+The System.Object type declares a virtual method Finalize (also called the finalizer) 
+that is called by the Garbage Collector before the object's memory is reclaimed.
+
+When an application creates a new object, the new operator allocates the memory from the heap. If the object's type contains a Finalize method, 
+then a pointer to the object is placed on the finalization queue.
+
+ When a garbage collection takes place, the GC finds such object in the Finalization queue but doesn't run its finalizer directly. 
+ Instead, the GC puts the object to the F-reachable queue and runs the finalizer in a separate Finalization thread 
+ (all of these is done for the sake of performance as the finalizer can potentially run any amount of code)
+
+  On the next GC, the object in the F-reachable queue is garbage collected.

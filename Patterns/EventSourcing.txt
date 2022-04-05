@@ -1,0 +1,21 @@
+ Event Sourcing is a software architecture pattern which states that state of the application should be persisted as sequence of Events
+
+Events get pushed into the Write side which does basically two things:
+	-appends them to a storage system
+	-pushes integration events to a queue
+
+Keeping track of what happens in an append-only storage allows us to replay events and rebuild the state of our domain models at any time. 
+In case something bad occurs, we have an almost immediate way to understand what went wrong and possibly how to fix the issue.
+
+Performance and scalability. The Query Models can be built with whatever technology fits the needs. 
+Data can be persisted in a relational database, in a NoSQL one or just plain HTML. 
+Whatever is faster and more suited for the job. Moreover, if the business needs change we can quickly adapt and generate completely new forms of the models.
+
+
+Moreover, the Query DBs can be wiped out and repopulated from scratch by simply replaying all the events. 
+This gives the possibility to avoid potentially problematic things like migrations or even backups since 
+all you have to do is just run the events again and you get the models back.
+
+
+
+https://itnext.io/implementing-event-store-in-c-8a27138cc90
