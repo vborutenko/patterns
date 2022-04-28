@@ -1,0 +1,2 @@
+﻿Almost all asynchronous I/O don't use a thread, they use different things. async/await by themselves do not spin up new threads but obviously 
+the "things we wait for" may be implemented using threads.

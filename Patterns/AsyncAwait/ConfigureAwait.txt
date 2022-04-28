@@ -1,0 +1,9 @@
+﻿Synchronization Context is the environment that a thread runs in
+
+No thread can access another thread’s data or pass any unit of work to the other thread without communicating
+through the target thread’s synchronization context
+
+
+One of the core concepts of synchronization context is context switching. It is what happens when you await a task.
+You capture the current context before awaiting the task, leaving it to the task context,
+then recovering (re-entering) it back when the task completes. 

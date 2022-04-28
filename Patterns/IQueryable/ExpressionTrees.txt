@@ -1,4 +1,5 @@
-﻿1.In C#, expression trees can be used in either of two directions: we can create them directly via an API and then compile them into runtime instructions, 
+﻿1.In C#, expression trees can be used in either of two directions: we can create them directly via 
+an API and then compile them into runtime instructions, 
 or we can disassemble them from supplied lambda expressions. In this part of the article we will focus on the first one.
 
 2.
