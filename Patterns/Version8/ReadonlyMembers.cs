@@ -11,7 +11,7 @@ namespace Version8
         public double Y { get; set; }
         public readonly double Distance => Math.Sqrt(X * X + Y * Y);
 
-        public override readonly string ToString()
+        public readonly override string ToString()
         {
             //X += 1;  cannot assign because it is readonly
             return $"({X}, {Y}) is {Distance} from the origin";

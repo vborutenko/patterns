@@ -1,0 +1,6 @@
+YAGNI principle ("You Aren't Gonna Need It") is a practice in software development which states that features should only be added when required
+
+It's a statement that some capability we presume our software needs in the future should not be built now because "you aren't gonna need it".
+
+Even in this happy case, building the presumptive feature incurs two serious costs. The first cost is the cost of delayed value. 
+By expending our effort on the piracy pricing software we didn't build some other feature

@@ -1,0 +1,3 @@
+KISS (Keep it Simple, Stupid) 
+
+-states that most systems work best if they are kept simple rather than made overly complicated.

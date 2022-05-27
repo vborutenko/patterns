@@ -1,0 +1,53 @@
+﻿Normalization is the process of minimizing redundancy from a relation or set of relations.
+
+
+1NF
+
+	--Contains only atomic values
+
+
+	ID   Name   Courses
+	------------------
+	1    A      c1, c2
+	2    E      c3
+	3    M      C2, c3
+
+	--In the above table Course is a multi-valued attribute so it is not in 1NF.
+
+	ID   Name   Course
+	------------------
+	1    A       c1
+	1    A       c2
+	2    E       c3
+	3    M       c2
+	3    M       c3
+	
+2NF
+
+	To be in second normal form, a relation must be in first normal form and relation must not contain any partial dependency
+
+	Every non-key attribute is fully dependent on the primary key of the table
+
+	STUD_NO            COURSE_NO        COURSE_FEE
+	1                     C1                  1000
+	2                     C2                  1500
+	1                     C4                  2000
+	4                     C3                  1000
+	4                     C1                  1000
+	2                     C5                  2000
+
+	-->
+
+	 Table 1                                    Table 2
+	STUD_NO            COURSE_NO          COURSE_NO                COURSE_FEE     
+	1                 C1                  C1                        1000
+	2                 C2                  C2                        1500
+	1                 C4                  C3                        1000
+	4                 C3                  C4                        2000
+	4                 C1                  C5                        2000        
+	2                 C5                         
+
+3NF
+
+
+

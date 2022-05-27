@@ -56,9 +56,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL", "SQL", "{6E201888-6ACB-40F6-A8FC-74995A6FA27F}"
 	ProjectSection(SolutionItems) = preProject
 		---Hints.sql = ---Hints.sql
-		---Views.sql = ---Views.sql
 		--ACID.sql = --ACID.sql
-		--Normalization.sql = --Normalization.sql
+		--Normalization.txt = --Normalization.txt
 		Constraints.sql = Constraints.sql
 		Cross Apply.sql = Cross Apply.sql
 		Functions.sql = Functions.sql
@@ -71,6 +70,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL", "SQL", "{6E201888-6AC
 		Transactions isolation Levels.sql = Transactions isolation Levels.sql
 		Transactions.sql = Transactions.sql
 		Union.sql = Union.sql
+		Views.sql = Views.sql
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flyweight", "Flyweight\Flyweight.csproj", "{9B2AC9B5-4ADC-4AF7-937C-514308459E0A}"
@@ -80,6 +80,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Composite", "Composite\Composite.csproj", "{D39DE73E-9ED3-4A56-9821-237BAE7EFF40}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OOP", "OOP", "{8A1C04AC-3C25-4C5B-8F59-0A294DFDCBB0}"
+	ProjectSection(SolutionItems) = preProject
+		--SOLID.txt = --SOLID.txt
+		KISS.txt = KISS.txt
+		YAGNI.txt = YAGNI.txt
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Algoritms and structures", "Algoritms and structures", "{9CDB40DC-866C-49A5-9CC9-06709763696C}"
 EndProject
@@ -126,6 +131,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OAuth", "OAuth\OAuth.csproj", "{E1E052E6-5681-465A-841C-3C7406DC9934}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Equals", "Equals\Equals.csproj", "{1B8B2531-8598-4E17-97DF-3A4D7B9F4C75}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Collections", "Collections\Collections.csproj", "{C06714E3-F913-4C85-9036-F9EB33BBF0C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -269,6 +276,10 @@ Global
 		{1B8B2531-8598-4E17-97DF-3A4D7B9F4C75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B8B2531-8598-4E17-97DF-3A4D7B9F4C75}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B8B2531-8598-4E17-97DF-3A4D7B9F4C75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C06714E3-F913-4C85-9036-F9EB33BBF0C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C06714E3-F913-4C85-9036-F9EB33BBF0C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C06714E3-F913-4C85-9036-F9EB33BBF0C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C06714E3-F913-4C85-9036-F9EB33BBF0C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -314,6 +325,7 @@ Global
 		{49FE4322-F32D-475C-82C0-C67664A71E7D} = {1A0D2C66-7F63-423E-8380-453B2E2F1AB4}
 		{E1E052E6-5681-465A-841C-3C7406DC9934} = {242C7A2A-B986-4D37-969B-A02C40B58A00}
 		{1B8B2531-8598-4E17-97DF-3A4D7B9F4C75} = {1A0D2C66-7F63-423E-8380-453B2E2F1AB4}
+		{C06714E3-F913-4C85-9036-F9EB33BBF0C0} = {1A0D2C66-7F63-423E-8380-453B2E2F1AB4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8E0D6FFC-FDC2-41D8-902F-A030499DA3A8}
