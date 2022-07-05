@@ -1,0 +1,9 @@
+https://developer.mozilla.org/en-US/docs/Glossary/MVC
+
+Some other design patterns are based on MVC, such as MVVM (Model-View-Viewmodel), MVP (Model-View-Presenter), 
+and MVW (Model-View-Whatever).
+
+
+1.Model: Manages data and business logic.
+2.View: Handles layout and display.
+3.Controller: Routes commands to the model and view parts.

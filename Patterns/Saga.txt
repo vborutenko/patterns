@@ -1,0 +1,18 @@
+https://medium.com/design-microservices-architecture-with-patterns/saga-pattern-for-microservices-distributed-transactions-7e95d0613345
+
+A saga is a sequence of transactions that updates each service and publishes a message or event to trigger the next transaction step. 
+If a step fails, the saga executes compensating transactions that counteract the preceding transactions.
+
+Compensation transaction shoud be retryible and idempotent*.
+
+There are two ways of coordination sagas:
+
+--Choreography - each local transaction publishes domain events that trigger local transactions in other services
+
+--Orchestration - an orchestrator (object) tells the participants what local transactions to execute .
+Orchestration way is good for complex workflows which includes lots of steps. 
+But this makes single point-of-failure with centralized controller microservices and need implementation of complex steps.
+
+
+*An idempotent operation can be repeated an arbitrary number of times 
+and the result will be the same as if it had been done only once

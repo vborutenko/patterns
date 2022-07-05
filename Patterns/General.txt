@@ -1,0 +1,27 @@
+
+
+docker file
+
+FROM node:12-alpine
+RUN apk add --no-cache python2 g++ make
+WORKDIR /app
+COPY . .
+RUN yarn install --production
+CMD ["node", "src/index.js"]
+EXPOSE 3000
+
+$ docker build -t getting-started .
+
+This command used the Dockerfile to build a new container image. 
+
+$ docker run -dp 3000:3000 getting-started
+
+This command 
+
+
+Volumes provide the ability to connect specific filesystem paths of the container back to the host machine. 
+If a directory in the container is mounted, changes in that directory are also seen on the host machine
+
+$ docker volume create todo-db - create volume
+
+$ docker run -dp 3000:3000 -v todo-db:/etc/todos getting-started - We will use the named volume and mount it to /etc/todos

@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace State
 {
+    //State is a behavioral design pattern that lets an object alter its behavior when its internal state changes.
+    //It appears as if the object changed its class.
+
+    //The State pattern suggests that you create new classes for all possible states of an object and extract
+    //all state-specific behaviors into these classes.
     class Program
     {
         static void Main(string[] args)

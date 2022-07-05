@@ -43,14 +43,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AsyncAwait.cs" />
+    <Compile Include="Interlocked.cs" />
+    <Compile Include="Monitor.cs" />
+    <Compile Include="Plinq.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TaskParallelLibrary.cs" />
+    <Compile Include="SemaphoreAndSemaphoreSlim.cs" />
+    <Compile Include="ThreadPool.cs" />
+    <Compile Include="_ValueTask.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AsyncAwait.txt" />
     <Content Include="Task.run vs new task vs startNew.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,0 +1,32 @@
+Application configuration in ASP.NET Core is performed using one or more configuration providers. 
+Configuration providers read configuration data from key-value pairs using a variety of configuration sources:
+
+--Settings files, such as appsettings.json
+--Environment variables
+--Azure Key Vault
+--Azure App Configuration
+--Command-line arguments
+--Custom providers, installed or created
+--Directory files
+--In-memory .NET objects
+
+--Default application configuration sources--
+
+The initialized WebApplicationBuilder (builder) provides default configuration for the app in the following order, 
+from highest to lowest priority:
+
+1.Command-line arguments using the Command-line configuration provider.
+2.Non-prefixed environment variables using the Non-prefixed environment variables configuration provider.
+3.User secrets when the app runs in the Development environment.
+4.appsettings.{Environment}.json using the JSON configuration provider. For example, appsettings.Production.json and appsettings.Development.json.
+5.appsettings.json using the JSON configuration provider.
+6.A fallback to the host configuration described in the next section.
+
+--Default host configuration sources--
+
+1.ASPNETCORE_-prefixed environment variables using the Environment variables configuration provider.
+2.Command-line arguments using the Command-line configuration provider
+3.DOTNET_-prefixed environment variables using the Environment variables configuration provider.
+
+When a configuration value is set in host and application configuration, the application configuration is used.
+

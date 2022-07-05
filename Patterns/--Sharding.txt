@@ -1,0 +1,17 @@
+Sharding is the process of breaking up large tables into smaller chunks called shards that are spread across multiple servers.
+
+When dividing a data store up into shards, decide which data should be placed in each shard. 
+A shard typically contains items that fall within a specified range determined by one or more attributes of the data. 
+These attributes form the shard key (sometimes referred to as the partition key). 
+The shard key should be static. It shouldn't be based on data that might change.
+
+Three strategies are commonly used when selecting the shard key and deciding how to distribute data across shards.
+
+1. The Lookup strategy. In this strategy the sharding logic implements a map that routes a request for data to the shard 
+that contains that data using the shard key. 
+In a multi-tenant application all the data for a tenant might be stored together in a shard using the tenant ID as the shard key. 
+Multiple tenants might share the same shard, but the data for a single tenant won't be spread across multiple shards.
+
+2. The Range strategy.
+
+3. The Hash strategy.

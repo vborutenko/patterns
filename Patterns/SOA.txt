@@ -1,0 +1,33 @@
+---Service Oriented Architecture
+
+Service Oriented Architecture is a software architecture, where distinct components of the application provide services 
+to other components via a communications protocol over a network. 
+The communication can involve either simple data passing or it could involve two or more services coordinating 
+connecting services to each other. These distinct services carry out some small functions, such as validating payment, 
+creating a user account, or providing social log-in.
+
+Service-oriented Architecture is less about how to modularize an application, and more about how to compose an application 
+by integration of distributed, separately-maintained and deployed software components.
+
+There are 2 main roles in SOA, a service provider, and a service consumer
+
+ Every service is communicating through the ESB (enterprise service bus)
+
+ the main difference between SOA and microservices lies in the size and scope. 
+ The prefix “micro” in microservices refers to the granularity of the internal components, 
+ meaning they have to be significantly smaller than what SOA tends to be. 
+ Service components within microservices generally have a single purpose and they do that one thing really well. 
+ On the other hand, in SOA services usually include much more business functionality,
+
+
+
+---Microservices
+Microservices, in a way, are the next step in the evolution of Service-Oriented Architectures. Basically, 
+this architecture type is a particular way of developing software, 
+web or mobile applications as suites of independent services — a.k.a microservices. 
+These services are created to serve only one specific business function, such as User Management, User Roles, 
+E-commerce Cart, Search Engine, Social Media Logins etc
+
+
+
+https://stackoverflow.com/a/51770887/2021019

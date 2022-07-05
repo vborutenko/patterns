@@ -1,0 +1,21 @@
+Microservices architecture is a way of creating applications through loosely coupling services. 
+Every service represents a system component that can be created and maintained separately, 
+executing an independent business goal.
+
+
+ - Microservices are small, independent, and loosely coupled
+ - Each service is a separate codebase, which can be managed by a small development team.
+ - Services can be deployed independently. 
+A team can update an existing service without rebuilding and redeploying the entire application.
+ - Services are responsible for persisting their own data or external state
+ - Services can be scaled independently, letting you scale out subsystems that require more resources, 
+ without scaling out the entire application.
+ - Fault isolation. If an individual microservice becomes unavailable, it won't disrupt the entire application
+
+ --DISANDANTAGES
+
+ -- Complexity. A microservices application has more moving parts than the equivalent monolithic application. 
+ Each service is simpler, but the entire system as a whole is more complex.
+ -- Network congestion and latency. The use of many small, granular services can result in more interservice communication
+ -- Data integrity. With each microservice responsible for its own data persistence. 
+ As a result, data consistency can be a challenge. Embrace eventual consistency where possible.

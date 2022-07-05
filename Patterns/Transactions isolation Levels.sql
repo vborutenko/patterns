@@ -64,15 +64,19 @@ INSERT INTO Person.ContactType VALUES ('test','2008-04-30 00:00:00.000') -- allo
 
 --Serializable
 
---This isolation level takes Repeatable Read and adds the guarantee that no new data will be added eradicating the chance of getting Phantom Reads
+--This isolation level takes Repeatable Read and adds the guarantee that no new data will be added eradicating the chance 
+--of getting Phantom Reads . Serializable isolation level achieves this consistency by placing a range lock or table level lock during the transaction
 
 
 
 --Snapshot
 
---This provides the same guarantees as serializable. So what's the difference? Well it’s more in the way it works, using snapshot doesn't
---block other queries from inserting or updating the data touched by the snapshot transaction. Instead row versioning is 
---used so when data is changed the old version is kept in tempdb so existing transactions will see the version without the change
+-- Snapshot isolation level does not block other transactions from accessing the rows that are used by the transaction
+-- It means that when a row is changed by another transaction, the old version of that row is stored in the tempdb database 
+-- and the current transaction sees the modified data as it was when the transaction started. 
+--In other words, the transaction with Snapshot isolation level can see only changes which have been 
+--committed before the transaction starts and any changes which have been made by other transactions 
+--after the start of the current transaction are invisible to it
 
 --You’re using extra resources on the SQL Server to hold multiple versions of your changes.
 

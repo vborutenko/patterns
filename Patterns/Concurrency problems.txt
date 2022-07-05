@@ -1,0 +1,10 @@
+1. Dirty Reads
+One transaction is allowed to read the uncommitted data of another transaction
+2. Lost Update
+The Lost Update Concurrency Problem happens in SQL Server when two or more transactions are allowed to read and update the same data.
+(Select value than value++ than update)
+3. Non-Repeatable Read
+one transaction reads the same data twice while another transaction updates that data 
+in between the first and second read of the first transaction. (see image)
+4. Phantom Read
+One transaction executes a query twice and it gets a different number of rows in the result set each time(see image)

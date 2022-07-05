@@ -31,7 +31,8 @@ that finds and creates a list of all live objects.
 updates the references to the objects that will be compacted.
 
 -Compact phase
-The space is reclaimed from dead objects. The live objects in heap and free memory are compacted in memory to ensure the allocation of new objects in small time. The compaction of large objects is not done because it can create a bad impact on performance.
+The space is reclaimed from dead objects. The live objects in heap and free memory are compacted in memory to ensure the allocation of new objects in small time. 
+The compaction of large objects is not done because it can create a bad impact on performance.
 
 
 
@@ -42,8 +43,8 @@ The space is reclaimed from dead objects. The live objects in heap and free memo
 The System.Object type declares a virtual method Finalize (also called the finalizer) 
 that is called by the Garbage Collector before the object's memory is reclaimed.
 
-When an application creates a new object, the new operator allocates the memory from the heap. If the object's type contains a Finalize method, 
-then a pointer to the object is placed on the finalization queue.
+When an application creates a new object, the new operator allocates the memory from the heap. 
+If the object's type contains a Finalize method, then a pointer to the object is placed on the finalization queue.
 
  When a garbage collection takes place, the GC finds such object in the Finalization queue but doesn't run its finalizer directly. 
  Instead, the GC puts the object to the F-reachable queue and runs the finalizer in a separate Finalization thread 

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31702.278
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Creational patterns", "Creational patterns", "{7A383F92-0559-4A79-B2CE-435C0C8F3E42}"
 EndProject
@@ -56,10 +56,11 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL", "SQL", "{6E201888-6ACB-40F6-A8FC-74995A6FA27F}"
 	ProjectSection(SolutionItems) = preProject
 		---Hints.sql = ---Hints.sql
-		--ACID.sql = --ACID.sql
 		--Normalization.txt = --Normalization.txt
+		ACID.txt = ACID.txt
 		Constraints.sql = Constraints.sql
 		Cross Apply.sql = Cross Apply.sql
+		Full-Text Search.txt = Full-Text Search.txt
 		Functions.sql = Functions.sql
 		GroupBy (having,aggregate functions).sql = GroupBy (having,aggregate functions).sql
 		Indexes.sql = Indexes.sql
@@ -81,8 +82,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Composite", "Composite\Comp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OOP", "OOP", "{8A1C04AC-3C25-4C5B-8F59-0A294DFDCBB0}"
 	ProjectSection(SolutionItems) = preProject
-		--SOLID.txt = --SOLID.txt
 		KISS.txt = KISS.txt
+		SOLID.txt = SOLID.txt
 		YAGNI.txt = YAGNI.txt
 	EndProjectSection
 EndProject
@@ -104,7 +105,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Programming", "Programming"
 	ProjectSection(SolutionItems) = preProject
 		--DDD.txt = --DDD.txt
 		--Microservice.txt = --Microservice.txt
-		--Saga.txt = --Saga.txt
 		CAP.txt = CAP.txt
 		CQRS.txt = CQRS.txt
 		EventSourcing.txt = EventSourcing.txt
@@ -124,15 +124,73 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SortingAlgorithms", "Sortin
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Version8", "Version8\Version8.csproj", "{18A65675-AEB7-43EC-B0E9-3642C7BA30D0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsyncAwait", "AsyncAwait\AsyncAwait.csproj", "{49FE4322-F32D-475C-82C0-C67664A71E7D}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Other", "Other", "{242C7A2A-B986-4D37-969B-A02C40B58A00}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OAuth", "OAuth\OAuth.csproj", "{E1E052E6-5681-465A-841C-3C7406DC9934}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Equals", "Equals\Equals.csproj", "{1B8B2531-8598-4E17-97DF-3A4D7B9F4C75}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Collections", "Collections\Collections.csproj", "{C06714E3-F913-4C85-9036-F9EB33BBF0C0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Version9", "Version9\Version9.csproj", "{43501A7F-9D6B-48A2-A90B-FD5B49B725F3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionArchitecture", "SolutionArchitecture", "{166509D9-A5C1-46EE-AD15-E0D5DDEB4817}"
+	ProjectSection(SolutionItems) = preProject
+		--Microservices.txt = --Microservices.txt
+		--MVVM.txt = --MVVM.txt
+		MVC.txt = MVC.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SOA", "SOA", "{FE3DEEC8-272F-4B8C-8242-47BA2427F168}"
+	ProjectSection(SolutionItems) = preProject
+		SOA.png = SOA.png
+		SOA.txt = SOA.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "--Microservices", "--Microservices", "{8934C3D7-97DD-4424-99F4-95B2A09428A8}"
+	ProjectSection(SolutionItems) = preProject
+		--Microservices.txt = --Microservices.txt
+		..\..\..\Desktop\Microservices.png = ..\..\..\Desktop\Microservices.png
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docker", "Docker", "{666E04A0-6658-4942-8E18-4CD80A67A3E3}"
+	ProjectSection(SolutionItems) = preProject
+		General.txt = General.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Patterns", "Patterns", "{F6C593EE-6BA2-455B-B490-AE4A991B1EAD}"
+	ProjectSection(SolutionItems) = preProject
+		Saga.txt = Saga.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Saga", "Saga", "{DD3698BB-A3B6-4000-B052-A8C731B60C13}"
+	ProjectSection(SolutionItems) = preProject
+		Saga.png = Saga.png
+		Saga.txt = Saga.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Isolation Levels", "Isolation Levels", "{A97D5F90-FFE4-437C-8398-79D400E460B7}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Desktop\Concurency problems.png = ..\..\..\Desktop\Concurency problems.png
+		Concurrency problems.txt = Concurrency problems.txt
+		..\..\..\Desktop\Non-repeatable read.png = ..\..\..\Desktop\Non-repeatable read.png
+		Optimistic locking vs Pesimistic.txt = Optimistic locking vs Pesimistic.txt
+		..\..\..\Desktop\PhantomRead.png = ..\..\..\Desktop\PhantomRead.png
+		Transactions isolation Levels.sql = Transactions isolation Levels.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Patterns", "Patterns", "{F22E4E52-897C-4943-8706-899ED323550F}"
+	ProjectSection(SolutionItems) = preProject
+		--Sharding.txt = --Sharding.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Asp.Net Core", "Asp.Net Core", "{36110DAE-CB50-4D3D-82A3-E7C26F038197}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Concepts", "Concepts", "{7035CDB1-D238-4A75-B9BC-EC59D48E519C}"
+	ProjectSection(SolutionItems) = preProject
+		Configuration.txt = Configuration.txt
+		middlewares.txt = middlewares.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Configuration", "Configuration\Configuration.csproj", "{40EDC557-28AD-4AC3-8BB1-DF483893012C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -264,14 +322,6 @@ Global
 		{18A65675-AEB7-43EC-B0E9-3642C7BA30D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18A65675-AEB7-43EC-B0E9-3642C7BA30D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18A65675-AEB7-43EC-B0E9-3642C7BA30D0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{49FE4322-F32D-475C-82C0-C67664A71E7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{49FE4322-F32D-475C-82C0-C67664A71E7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{49FE4322-F32D-475C-82C0-C67664A71E7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{49FE4322-F32D-475C-82C0-C67664A71E7D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E1E052E6-5681-465A-841C-3C7406DC9934}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E1E052E6-5681-465A-841C-3C7406DC9934}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E1E052E6-5681-465A-841C-3C7406DC9934}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E1E052E6-5681-465A-841C-3C7406DC9934}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1B8B2531-8598-4E17-97DF-3A4D7B9F4C75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1B8B2531-8598-4E17-97DF-3A4D7B9F4C75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B8B2531-8598-4E17-97DF-3A4D7B9F4C75}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -280,6 +330,14 @@ Global
 		{C06714E3-F913-4C85-9036-F9EB33BBF0C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C06714E3-F913-4C85-9036-F9EB33BBF0C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C06714E3-F913-4C85-9036-F9EB33BBF0C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43501A7F-9D6B-48A2-A90B-FD5B49B725F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43501A7F-9D6B-48A2-A90B-FD5B49B725F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43501A7F-9D6B-48A2-A90B-FD5B49B725F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43501A7F-9D6B-48A2-A90B-FD5B49B725F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40EDC557-28AD-4AC3-8BB1-DF483893012C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40EDC557-28AD-4AC3-8BB1-DF483893012C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40EDC557-28AD-4AC3-8BB1-DF483893012C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40EDC557-28AD-4AC3-8BB1-DF483893012C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -322,10 +380,18 @@ Global
 		{3B33DD21-8112-4AE1-ACD4-ADCBB5B0D6A5} = {1A0D2C66-7F63-423E-8380-453B2E2F1AB4}
 		{B9E6F120-DDA0-46F1-B8BF-984F3D77CBE3} = {9CDB40DC-866C-49A5-9CC9-06709763696C}
 		{18A65675-AEB7-43EC-B0E9-3642C7BA30D0} = {CB2B1316-194C-4633-96D8-9A499016A584}
-		{49FE4322-F32D-475C-82C0-C67664A71E7D} = {1A0D2C66-7F63-423E-8380-453B2E2F1AB4}
-		{E1E052E6-5681-465A-841C-3C7406DC9934} = {242C7A2A-B986-4D37-969B-A02C40B58A00}
 		{1B8B2531-8598-4E17-97DF-3A4D7B9F4C75} = {1A0D2C66-7F63-423E-8380-453B2E2F1AB4}
 		{C06714E3-F913-4C85-9036-F9EB33BBF0C0} = {1A0D2C66-7F63-423E-8380-453B2E2F1AB4}
+		{43501A7F-9D6B-48A2-A90B-FD5B49B725F3} = {CB2B1316-194C-4633-96D8-9A499016A584}
+		{FE3DEEC8-272F-4B8C-8242-47BA2427F168} = {166509D9-A5C1-46EE-AD15-E0D5DDEB4817}
+		{8934C3D7-97DD-4424-99F4-95B2A09428A8} = {166509D9-A5C1-46EE-AD15-E0D5DDEB4817}
+		{666E04A0-6658-4942-8E18-4CD80A67A3E3} = {242C7A2A-B986-4D37-969B-A02C40B58A00}
+		{F6C593EE-6BA2-455B-B490-AE4A991B1EAD} = {8934C3D7-97DD-4424-99F4-95B2A09428A8}
+		{DD3698BB-A3B6-4000-B052-A8C731B60C13} = {F6C593EE-6BA2-455B-B490-AE4A991B1EAD}
+		{A97D5F90-FFE4-437C-8398-79D400E460B7} = {6E201888-6ACB-40F6-A8FC-74995A6FA27F}
+		{F22E4E52-897C-4943-8706-899ED323550F} = {6E201888-6ACB-40F6-A8FC-74995A6FA27F}
+		{7035CDB1-D238-4A75-B9BC-EC59D48E519C} = {36110DAE-CB50-4D3D-82A3-E7C26F038197}
+		{40EDC557-28AD-4AC3-8BB1-DF483893012C} = {36110DAE-CB50-4D3D-82A3-E7C26F038197}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8E0D6FFC-FDC2-41D8-902F-A030499DA3A8}
