@@ -1,0 +1,26 @@
+Assembly a:
+
+public class Const_V_Readonly
+{
+  public const int I_CONST_VALUE = 2;
+  public readonly int I_RO_VALUE;
+  public Const_V_Readonly()
+  {
+     I_RO_VALUE = 3;
+  }
+}
+
+AssemblyB references AssemblyA and uses these values in code. When this is compiled,
+
+in the case of the const value, it is like a find-replace, the value 2 is 'baked into' the AssemblyB's IL. 
+This means that if tomorrow I'll update I_CONST_VALUE to 20 in the future. AssemblyB would still have 2 till I recompile it.
+
+in the case of the readonly value, it is like a ref to a memory location. 
+The value is not baked into AssemblyB's IL. 
+This means that if the memory location is updated, 
+AssemblyB gets the new value without recompilation. 
+So if I_RO_VALUE is updated to 30, you only need to build AssemblyA. All clients do not need to be recompiled.
+
+Remember: If you reference a constant from another assembly, 
+its value will be compiled right into the calling assembly. 
+That way when you update the constant in the referenced assembly it won't change in the calling assembly!

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.2.32616.157
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32510.428
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Creational patterns", "Creational patterns", "{7A383F92-0559-4A79-B2CE-435C0C8F3E42}"
 EndProject
@@ -40,6 +40,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Singleton", "Singleton\Singleton.csproj", "{127C6517-6FC6-467B-9FCD-7D1E5B95280E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Csharp", "Csharp", "{1A0D2C66-7F63-423E-8380-453B2E2F1AB4}"
+	ProjectSection(SolutionItems) = preProject
+		ConstVsReadonly.txt = ConstVsReadonly.txt
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IQueryable", "IQueryable\IQueryable.csproj", "{0B98DF62-4F09-40CD-ACAE-ADF056E233E7}"
 EndProject
@@ -94,6 +97,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Net", ".Net", "{BF915D8E-4C77-4067-938C-D0A206D3007B}"
 	ProjectSection(SolutionItems) = preProject
 		Boxing_unboxing.txt = Boxing_unboxing.txt
+		Clr.txt = Clr.txt
 		Garbage Collector.txt = Garbage Collector.txt
 		Managed_Unmanaged Resources.txt = Managed_Unmanaged Resources.txt
 		Stack_vs_heap.txt = Stack_vs_heap.txt
@@ -119,8 +123,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Version7", "---Version7\Version7.csproj", "{8EFED4F7-4CA0-47BC-B86B-52BD5B502B39}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitOperation", "BitOperation\BitOperation.csproj", "{3B33DD21-8112-4AE1-ACD4-ADCBB5B0D6A5}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SortingAlgorithms", "SortingAlgoritms\SortingAlgorithms.csproj", "{B9E6F120-DDA0-46F1-B8BF-984F3D77CBE3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Version8", "Version8\Version8.csproj", "{18A65675-AEB7-43EC-B0E9-3642C7BA30D0}"
 EndProject
@@ -158,7 +160,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docker", "Docker", "{666E04
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Patterns", "Patterns", "{F6C593EE-6BA2-455B-B490-AE4A991B1EAD}"
 	ProjectSection(SolutionItems) = preProject
-		Saga.txt = Saga.txt
+		Dead letter queue.txt = Dead letter queue.txt
+		Idempotent Consumer.txt = Idempotent Consumer.txt
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Saga", "Saga", "{DD3698BB-A3B6-4000-B052-A8C731B60C13}"
@@ -190,7 +193,45 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Concepts", "Concepts", "{70
 		middlewares.txt = middlewares.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Configuration", "Configuration\Configuration.csproj", "{40EDC557-28AD-4AC3-8BB1-DF483893012C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Configuration", "Configuration\Configuration.csproj", "{40EDC557-28AD-4AC3-8BB1-DF483893012C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Javascript", "Javascript", "{4CC314DC-392F-4AEF-9F05-2BA99689B9C4}"
+	ProjectSection(SolutionItems) = preProject
+		Classes.js = Classes.js
+		EventLoop.js = EventLoop.js
+		Functions.js = Functions.js
+		FunctionsAdvanced.js = FunctionsAdvanced.js
+		Fundamentals.js = Fundamentals.js
+		Objects.js = Objects.js
+		Operators.js = Operators.js
+		This.js = This.js
+		Var_Let_Const.js = Var_Let_Const.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Prototype", "Prototype", "{30DBB5FF-0DBD-4171-AD9F-0FF903DE528A}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Desktop\PersonPrototype.png = ..\..\..\Desktop\PersonPrototype.png
+		..\..\..\Desktop\PersonPrototype2.png = ..\..\..\Desktop\PersonPrototype2.png
+		Prototype.js = Prototype.js
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csproj", "{825B09A4-B248-453D-8276-2617E8D66454}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Outbox", "Outbox", "{207BB5CD-11BE-403A-972C-C00057CAD122}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Desktop\outbox.png = ..\..\..\Desktop\outbox.png
+		Outbox.txt = Outbox.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Concepts", "Concepts", "{9574C025-7DA6-4A5E-8943-84FDECFF8C0D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommonAlgorithms", "CommonAlgorithms\CommonAlgorithms.csproj", "{EBEC06A6-3CDE-4957-8278-65211B733132}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NoSQL", "NoSQL", "{25C25432-AFE8-4C2E-AF06-A7277F57CCC8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureCosmosDb", "AzureCosmosDb\AzureCosmosDb.csproj", "{3F1AEAD2-079D-4DB8-8BB5-9DBE6FDB2BFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test3", "Test3\Test3.csproj", "{B856FB03-EC85-4878-9CAA-2ED4DC1746AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -314,10 +355,6 @@ Global
 		{3B33DD21-8112-4AE1-ACD4-ADCBB5B0D6A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B33DD21-8112-4AE1-ACD4-ADCBB5B0D6A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B33DD21-8112-4AE1-ACD4-ADCBB5B0D6A5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B9E6F120-DDA0-46F1-B8BF-984F3D77CBE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B9E6F120-DDA0-46F1-B8BF-984F3D77CBE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B9E6F120-DDA0-46F1-B8BF-984F3D77CBE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B9E6F120-DDA0-46F1-B8BF-984F3D77CBE3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{18A65675-AEB7-43EC-B0E9-3642C7BA30D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{18A65675-AEB7-43EC-B0E9-3642C7BA30D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18A65675-AEB7-43EC-B0E9-3642C7BA30D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -338,6 +375,22 @@ Global
 		{40EDC557-28AD-4AC3-8BB1-DF483893012C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40EDC557-28AD-4AC3-8BB1-DF483893012C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40EDC557-28AD-4AC3-8BB1-DF483893012C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{825B09A4-B248-453D-8276-2617E8D66454}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{825B09A4-B248-453D-8276-2617E8D66454}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{825B09A4-B248-453D-8276-2617E8D66454}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{825B09A4-B248-453D-8276-2617E8D66454}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBEC06A6-3CDE-4957-8278-65211B733132}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBEC06A6-3CDE-4957-8278-65211B733132}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBEC06A6-3CDE-4957-8278-65211B733132}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBEC06A6-3CDE-4957-8278-65211B733132}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F1AEAD2-079D-4DB8-8BB5-9DBE6FDB2BFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F1AEAD2-079D-4DB8-8BB5-9DBE6FDB2BFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F1AEAD2-079D-4DB8-8BB5-9DBE6FDB2BFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F1AEAD2-079D-4DB8-8BB5-9DBE6FDB2BFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B856FB03-EC85-4878-9CAA-2ED4DC1746AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B856FB03-EC85-4878-9CAA-2ED4DC1746AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B856FB03-EC85-4878-9CAA-2ED4DC1746AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B856FB03-EC85-4878-9CAA-2ED4DC1746AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -378,7 +431,6 @@ Global
 		{A444A3EB-32D8-4305-BA8A-55B81E987E7B} = {1A0D2C66-7F63-423E-8380-453B2E2F1AB4}
 		{8EFED4F7-4CA0-47BC-B86B-52BD5B502B39} = {CB2B1316-194C-4633-96D8-9A499016A584}
 		{3B33DD21-8112-4AE1-ACD4-ADCBB5B0D6A5} = {1A0D2C66-7F63-423E-8380-453B2E2F1AB4}
-		{B9E6F120-DDA0-46F1-B8BF-984F3D77CBE3} = {9CDB40DC-866C-49A5-9CC9-06709763696C}
 		{18A65675-AEB7-43EC-B0E9-3642C7BA30D0} = {CB2B1316-194C-4633-96D8-9A499016A584}
 		{1B8B2531-8598-4E17-97DF-3A4D7B9F4C75} = {1A0D2C66-7F63-423E-8380-453B2E2F1AB4}
 		{C06714E3-F913-4C85-9036-F9EB33BBF0C0} = {1A0D2C66-7F63-423E-8380-453B2E2F1AB4}
@@ -392,6 +444,11 @@ Global
 		{F22E4E52-897C-4943-8706-899ED323550F} = {6E201888-6ACB-40F6-A8FC-74995A6FA27F}
 		{7035CDB1-D238-4A75-B9BC-EC59D48E519C} = {36110DAE-CB50-4D3D-82A3-E7C26F038197}
 		{40EDC557-28AD-4AC3-8BB1-DF483893012C} = {36110DAE-CB50-4D3D-82A3-E7C26F038197}
+		{30DBB5FF-0DBD-4171-AD9F-0FF903DE528A} = {4CC314DC-392F-4AEF-9F05-2BA99689B9C4}
+		{825B09A4-B248-453D-8276-2617E8D66454} = {1A0D2C66-7F63-423E-8380-453B2E2F1AB4}
+		{207BB5CD-11BE-403A-972C-C00057CAD122} = {F6C593EE-6BA2-455B-B490-AE4A991B1EAD}
+		{EBEC06A6-3CDE-4957-8278-65211B733132} = {9CDB40DC-866C-49A5-9CC9-06709763696C}
+		{3F1AEAD2-079D-4DB8-8BB5-9DBE6FDB2BFA} = {25C25432-AFE8-4C2E-AF06-A7277F57CCC8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8E0D6FFC-FDC2-41D8-902F-A030499DA3A8}

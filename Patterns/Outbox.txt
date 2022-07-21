@@ -1,0 +1,13 @@
+Simply, when your API publishes event messages, it doesn’t directly send them. 
+Instead, the messages are persisted in a database table. 
+After that, A job publish events to message broker system in predefined time intervals.
+
+In example, when a new product is added to the system, the process of adding the product and writing 
+the ProductCreated event to the outbox table is done in the same transaction, 
+ensuring that the event is saved to the database.
+
+The second step is to receive these events written to the outbox table by an independent service and write them to the event bus.
+
+Why we use this Outbox Pattern ?
+
+ the database update and sending of the message should be atomic

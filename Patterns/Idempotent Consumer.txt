@@ -1,0 +1,8 @@
+ Idempotence
+ --Making multiple identical requests has the same effect as making a single request--
+
+
+How does a message consumer handle duplicate messages correctly?
+
+Implement an idempotent consumer, which is a message consumer that can handle duplicate messages correctly
+You can make a consumer idempotent by recording in the database the IDs of the messages that it has processed successfully

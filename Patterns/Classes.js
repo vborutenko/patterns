@@ -79,3 +79,149 @@ class Person {
 
 let person = new Person('John', 'Doe');
 console.log(person.fullName);
+
+// --- Inheritance ---
+
+
+    //ES5
+    function Animal(legs) {
+        this.legs = legs;
+    }
+
+    Animal.prototype.walk = function () {
+        console.log('walking on ' + this.legs + ' legs');
+    }
+
+    function Bird(legs) {
+        Animal.call(this, legs);
+    }
+
+    Bird.prototype = Object.create(Animal.prototype);
+    Bird.prototype.constructor = Animal;
+
+
+    Bird.prototype.fly = function () {
+        console.log('flying');
+    }
+
+    var pigeon = new Bird(2);
+    pigeon.walk(); // walking on 2 legs
+    pigeon.fly();  // flying
+
+    //ES6
+
+    class Animal {
+        constructor(legs) {
+            this.legs = legs;
+        }
+        walk() {
+            console.log('walking on ' + this.legs + ' legs');
+        }
+    }
+
+    class Bird extends Animal {
+        constructor(legs) {
+            super(legs);
+        }
+        fly() {
+            console.log('flying');
+        }
+    }
+
+
+    let bird = new Bird(2);
+
+    bird.walk();
+    bird.fly();
+
+// --- Shadowing ---
+
+    //ES6 allows the child class and parent class to have methods with the same name
+    class Dog extends Animal {
+        constructor() {
+            super(4);
+        }
+        walk() {
+            super.walk(); // call the method of the parent class
+            console.log(`go walking`);
+        }
+    }
+
+    let bingo = new Dog();
+    bingo.walk(); // go walking
+
+//---Inheriting from built-in types
+
+    class Queue extends Array {
+        enqueue(e) {
+            super.push(e);
+        }
+        dequeue() {
+            return super.shift();
+        }
+        peek() {
+            return !this.empty() ? this[0] : undefined;
+        }
+        empty() {
+            return this.length === 0;
+        }
+    }
+
+    var customers = new Queue();
+    customers.enqueue('A');
+    customers.enqueue('B');
+    customers.enqueue('C');
+
+    while (!customers.empty()) {
+        console.log(customers.dequeue());
+}
+
+// ---Static methods---
+
+    class Person {
+        constructor(name) {
+            this.name = name;
+        }
+        getName() {
+            return this.name;
+        }
+        static createAnonymous(gender) {
+            let name = gender == "male" ? "John Doe" : "Jane Doe";
+            return new Person(name);
+        }
+    }
+
+    let anonymous = person.createAnonymous("male"); //TypeError: person.createAnonymous is not a function
+
+//  ---Static properties---
+    class Item {
+        constructor(name, quantity) {
+            this.name = name;
+            this.quantity = quantity;
+            this.constructor.count++;
+        }
+        static count = 0;
+        static getCount() {
+            return Item.count++;
+        }
+    }
+
+// --- Private Fields and Methods (ES2022)
+
+    class Circle {
+        #radius; // private field
+        constructor(value) {
+            this.#radius = value;
+        }
+
+        #privateMethod() { // private methods
+            //...
+        }
+        get area() {
+            return Math.PI * Math.pow(this.#radius, 2);
+        }
+    }
+
+    // Getter and setter can be added to privire fields
+    //Private fields are only accessible inside the class where they’re defined
+    // private fied can be static

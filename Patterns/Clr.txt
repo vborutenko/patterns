@@ -1,0 +1,11 @@
+The heart of .NET Framework is a run-time environment called the common language runtime (CLR). 
+The CLR manages the life cycle and executes .NET applications (code). 
+It also provides services that make the development process easier. 
+
+
+The CLR provides additional services including 
+memory management, 
+type safety, 
+exception handling, 
+garbage collection, 
+security and thread management.

@@ -18,52 +18,48 @@ namespace Flyweight
 
     //optimized
 
-    public static class ParticipleFactory
+    public static class FlyweightFactory
     {
-        private static Dictionary<string, ParticipleType> _cache = new Dictionary<string, ParticipleType>();
+        private static Dictionary<char, CharacterFlyweight> _cache = new Dictionary<char, CharacterFlyweight>();
 
-        public static ParticipleType GetParticipleType(string type, int weight)
+        public static CharacterFlyweight GetCharacterFlyweight(char symbol)
         {
-            if (_cache.ContainsKey(type))
+            CharacterFlyweight character = null;
+            if (_cache.ContainsKey(symbol))
             {
-                return _cache[type];
+                character = _cache[symbol];
+            }
+            else
+            {
+                switch (symbol)
+                {
+                    case 'A': character = new CharacterFlyweight('A', 5, 5); break;
+                    case 'B': character = new CharacterFlyweight('B', 7, 7); break;
+                    //...
+                    case 'Z': character = new CharacterFlyweight('Z', 1, 2); break;
+                }
             }
 
-            var participleType = new ParticipleType(type, weight);
 
-            return participleType;
+            return character;
         }
-
 
     }
 
 
-    public class ParticipleType
+    public class CharacterFlyweight
     {
-        public ParticipleType(string type, int weight)
-        {
-            Type = type;
-            Weight = weight;
-        }
 
         //Intrinsic-shared-immutable
-        public string Type { get; }   // A (Weight = 10),B(Weight = 20),C(Weight = 30)
-        public int Weight { get; }
-    }
+        public char Symbol { get; set; }
+        public int Height { get; set; }
+        public int Width { get; set; }
 
-    public class Participle
-    {
-        public ParticipleType ParticipleType { get; }
-
-        //Extrinsic-mutable 
-        public int Speed { get; set; }
-        public int GeoLocation { get; set; }
-
-        public Participle(string type, int weight, int speed, int geolocation)
+        public CharacterFlyweight(char symbol, int height, int width)
         {
-            ParticipleType = ParticipleFactory.GetParticipleType(type, weight);
-            Speed = speed;
-            GeoLocation = GeoLocation;
+            Symbol = symbol;
+            Height = height;
+            Width = width;
         }
     }
 
@@ -71,14 +67,20 @@ namespace Flyweight
 
     // Unoptimized
 
-    public class ParticipleUnoptimized
+    public class Character_Unoptimized
     {
         //Intrinsic-shared-immutable
-        public string Type { get; set; }   // A (Weight = 10),B(Weight = 20),C(Weight = 30)
-        public int Weight { get; set; }
+        public char Symbol { get; set; }
+        public int Height { get; set; }
+        public int Width { get; set; }
 
         //Extrinsic-mutable 
-        public int Speed { get; set; }
-        public int GeoLocation { get; set; }
+        public int X { get; set; }
+        public int Y { get; set; }
+
+        public void Display()
+        {
+            Console.WriteLine($"Displating character {Symbol} to postiiton x {X} and y {Y} ");
+        }
     }
 }

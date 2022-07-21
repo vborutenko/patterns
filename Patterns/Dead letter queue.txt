@@ -1,0 +1,3 @@
+The Dead Letter Queue (DLQ) is a service implementation within a messaging system 
+or data streaming platform to store messages that are not processed successfully. 
+Instead of passively dumping the message, the system moves it to a Dead Letter Queue.
